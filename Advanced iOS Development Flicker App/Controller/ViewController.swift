@@ -19,6 +19,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        searchBar.delegate = self
     }
     
     // MARK: - UICollectionViewDataSource
@@ -47,6 +48,10 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
 //        searchBar.resignFirstResponder()
 //        performSearchWithText(searchText: searchBar.text!)
 //    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        performSearchWithText(searchText: searchBar.text!)
+    }
     
     func performSearchWithText(searchText: String) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -69,10 +74,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         })
     }
     
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        searchBar.resignFirstResponder()
-//        performSearchWithText(searchText: searchBar.text!)
-//    }
+  
     
     func showAlert() {
         let alert = UIAlertController(title: "Error", message: "Please provide a valid API key", preferredStyle: .alert)
@@ -92,7 +94,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     @IBAction func searchBtn(_ sender: Any) {
         
         searchBar.resignFirstResponder()
-                performSearchWithText(searchText: searchBar.text!)
+        performSearchWithText(searchText: searchBar.text!)
 
     }
     
