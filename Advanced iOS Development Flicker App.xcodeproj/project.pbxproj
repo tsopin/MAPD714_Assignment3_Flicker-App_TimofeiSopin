@@ -16,6 +16,7 @@
 		747CA8452057424600A7F098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747CA8432057424600A7F098 /* LaunchScreen.storyboard */; };
 		747CA84D2057427600A7F098 /* Search API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747CA84C2057427600A7F098 /* Search API.swift */; };
 		747CA84F205742A800A7F098 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747CA84E205742A800A7F098 /* ImageModel.swift */; };
+		74AD5FA02060799D0077ACC3 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AD5F9F2060799D0077ACC3 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		747CA8462057424600A7F098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747CA84C2057427600A7F098 /* Search API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search API.swift"; sourceTree = "<group>"; };
 		747CA84E205742A800A7F098 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		74AD5F9F2060799D0077ACC3 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		916A37E0387FD9A42C622994 /* Pods-Advanced iOS Development Flicker App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advanced iOS Development Flicker App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Advanced iOS Development Flicker App/Pods-Advanced iOS Development Flicker App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				747CA83C2057424600A7F098 /* ViewController.swift */,
+				74AD5F9F2060799D0077ACC3 /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			files = (
 				747CA84D2057427600A7F098 /* Search API.swift in Sources */,
 				747CA83D2057424600A7F098 /* ViewController.swift in Sources */,
+				74AD5FA02060799D0077ACC3 /* DetailVC.swift in Sources */,
 				747CA83B2057424600A7F098 /* AppDelegate.swift in Sources */,
 				747CA84F205742A800A7F098 /* ImageModel.swift in Sources */,
 				74397CBF2057476F00865775 /* ImageCell.swift in Sources */,

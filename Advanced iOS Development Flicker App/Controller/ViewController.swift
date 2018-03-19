@@ -98,5 +98,20 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail"{
+            
+            if let indexPath = self.collectionView?.indexPath(for: sender as! UICollectionViewCell) {
+                
+                let detailView = segue.destination  as! DetailVC
+                
+                detailView.sentImage = images[indexPath.row].photoUrl
+                detailView.sentId = images[indexPath.row].photoId
+                detailView.sentTitle = images[indexPath.row].title
+            }
+            
+        }
+    }
+    
     
 }
