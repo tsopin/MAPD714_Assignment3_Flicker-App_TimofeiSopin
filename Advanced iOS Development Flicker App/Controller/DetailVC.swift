@@ -23,8 +23,8 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        navigationItem.title = "\(sentId!)"
+//        self.title =
         self.image.setImageFromURl(stringImageUrl: sentImage)
         self.label.text = sentId
         self.textView.text = sentTitle

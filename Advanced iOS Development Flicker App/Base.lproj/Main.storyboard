@@ -28,9 +28,11 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SMb-cE-pRo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="FZu-o4-C1p"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nwY-Fc-2JZ">
@@ -40,11 +42,11 @@
                                     <size key="itemSize" width="123" height="116"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="20" maxX="10" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="cP5-wf-Xsu" userLabel="ImageCell" customClass="ImageCell" customModule="Advanced_iOS_Development_Flicker_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <rect key="frame" x="10" y="20" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -136,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--DetailVC-->
+        <!--Title-->
         <scene sceneID="Xpv-ne-aJ8">
             <objects>
                 <viewController id="gX8-T6-hbk" customClass="DetailVC" customModule="Advanced_iOS_Development_Flicker_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,29 +146,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Original image_ 1920x1080" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-dI-eOe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Original image_ 1920x1080" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-dI-eOe">
                                 <rect key="frame" x="16" y="79" width="343" height="343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="NSw-jL-ZCn"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPZ-QS-VYV">
-                                <rect key="frame" x="16" y="472" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zPZ-QS-VYV">
+                                <rect key="frame" x="16" y="472" width="343" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Q21-hJ-9B4"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkG-6v-rqz">
-                                <rect key="frame" x="16" y="430" width="343" height="26.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkG-6v-rqz">
+                                <rect key="frame" x="16" y="430" width="343" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.5" id="zJQ-XY-mQV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5ro-dI-eOe" firstAttribute="leading" secondItem="cxh-3Q-zvm" secondAttribute="leading" constant="16" id="11Y-pf-Jh4"/>
+                            <constraint firstItem="zPZ-QS-VYV" firstAttribute="leading" secondItem="cxh-3Q-zvm" secondAttribute="leading" constant="16" id="C6U-kJ-OZK"/>
+                            <constraint firstItem="5ro-dI-eOe" firstAttribute="top" secondItem="cxh-3Q-zvm" secondAttribute="top" constant="15" id="QR6-zK-dv4"/>
+                            <constraint firstItem="cxh-3Q-zvm" firstAttribute="trailing" secondItem="5ro-dI-eOe" secondAttribute="trailing" constant="16" id="RxN-Iw-oAb"/>
+                            <constraint firstItem="cxh-3Q-zvm" firstAttribute="trailing" secondItem="xkG-6v-rqz" secondAttribute="trailing" constant="16" id="U7u-Fm-MQQ"/>
+                            <constraint firstItem="cxh-3Q-zvm" firstAttribute="bottom" secondItem="zPZ-QS-VYV" secondAttribute="bottom" constant="20" id="ZbJ-xF-1OQ"/>
+                            <constraint firstItem="xkG-6v-rqz" firstAttribute="top" secondItem="5ro-dI-eOe" secondAttribute="bottom" constant="8" symbolic="YES" id="Zh9-f1-26r"/>
+                            <constraint firstItem="cxh-3Q-zvm" firstAttribute="trailing" secondItem="zPZ-QS-VYV" secondAttribute="trailing" constant="16" id="vGl-P6-8oP"/>
+                            <constraint firstItem="xkG-6v-rqz" firstAttribute="leading" secondItem="cxh-3Q-zvm" secondAttribute="leading" constant="16" id="wZ5-R5-qq9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cxh-3Q-zvm"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="always" id="laz-3z-Z9o"/>
                     <connections>
                         <outlet property="image" destination="5ro-dI-eOe" id="A17-JY-HCj"/>
                         <outlet property="label" destination="xkG-6v-rqz" id="2S4-JC-dHs"/>
@@ -185,6 +205,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b54-3I-aPr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

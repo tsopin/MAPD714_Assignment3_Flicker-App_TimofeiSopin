@@ -42,6 +42,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     }
     
     
+    
     // MARK: - UISearchBarDelegate
     
 //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -56,7 +57,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     func performSearchWithText(searchText: String) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         SearchAPI.fetchPhotosForSearchText(searchText: searchText, onCompletion: { (error: NSError?, flickrPhotos: [ImageSearching]?) -> Void in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
             if error == nil {
                 self.images = flickrPhotos!
             } else {
